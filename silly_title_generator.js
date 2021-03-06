@@ -30,18 +30,18 @@ let title = verbTitle[Math.floor(Math.random() * verbTitle.length)];
 let figure = popCulFig[Math.floor(Math.random() * popCulFig.length)];
 let sub = subtitle[Math.floor(Math.random() * subtitle.length)];
 
-const philOn = () =>{console.log(`${philosopher} on ${topic} and ${reference}`)};
-const understanding = () => {console.log(`Understanding ${phenomenon} through ${philosopher} and ${reference}`)};
-const theIn = () => {console.log(`${title}: The ${phenomenon} in ${reference}`)}
-const illustrates = () => {console.log(`How ${reference} Illustrates ${philosopher}'s Concept of ${topic}`)};
-const oxfordComma = () => {console.log(`${figure}, ${philosopher}, and ${reference}: ${sub}`)};
+const philOn = () => {return `${philosopher} on ${topic} and ${reference}`};
+const understanding = () => {return `Understanding ${phenomenon} through ${philosopher} and ${reference}`};
+const theIn = () => {return `${title}: The ${phenomenon} in ${reference}`}
+const illustrates = () => {return `How ${reference} Illustrates ${philosopher}'s Concept of ${topic}`};
+const oxfordComma = () => {return `${figure}, ${philosopher}, and ${reference}: ${sub}`};
 
 
 let constructors = [philOn(), understanding(), theIn(), illustrates(), oxfordComma()];
 
 const output = () => {
     let randomConstructor = constructors[Math.floor(Math.random() * constructors.length)];
-    return randomConstructor;
+    console.log(randomConstructor);
 }
 
 output();
